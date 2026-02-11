@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect Me Now - Quick & Easy Website Redirect Tool</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Free online URL redirector tool. Enter any website URL and get redirected instantly. Simple, fast, and easy-to-use redirect service for all your web navigation needs.">
+    <meta name="keywords" content="url redirector, redirect tool, website redirect, url forwarder, quick redirect, web navigation, link redirect">
+    <meta name="author" content="Redirect Me Now">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://botgroupllc.com/">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Redirect Me Now - Quick & Easy Website Redirect Tool">
+    <meta property="og:description" content="Free online URL redirector tool. Enter any website URL and get redirected instantly.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://botgroupllc.com/">
+    <meta property="og:site_name" content="Redirect Me Now">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Redirect Me Now - Quick & Easy Website Redirect Tool">
+    <meta name="twitter:description" content="Free online URL redirector tool. Enter any website URL and get redirected instantly.">
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#667eea">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="icon.svg">
+    
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .container {
+            background: white;
+            padding: 30px 20px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: clamp(24px, 6vw, 32px);
+            line-height: 1.2;
+        }
+        
+        .logo-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 20px;
+            display: block;
+        }
+        
+        .description {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: clamp(14px, 4vw, 16px);
+            line-height: 1.5;
+        }
+        
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+        
+        input[type="text"] {
+            width: 100%;
+            padding: 14px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            transition: border-color 0.3s;
+            -webkit-appearance: none;
+            appearance: none;
+        }
+        
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 14px 40px;
+            font-size: 16px;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s, opacity 0.2s;
+            width: 100%;
+            min-height: 48px;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+        }
+        
+        button:active {
+            transform: translateY(0);
+            opacity: 0.9;
+        }
+        
+        .hint {
+            margin-top: 20px;
+            color: #666;
+            font-size: clamp(12px, 3.5vw, 14px);
+            line-height: 1.5;
+        }
+        
+        .cta {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #555;
+            font-size: clamp(13px, 3.5vw, 15px);
+        }
+        
+        .cta a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        .cta a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+        
+        footer {
+            position: fixed;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            padding: 0 20px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: clamp(12px, 3.5vw, 14px);
+        }
+        
+        footer p {
+            margin: 0;
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 25px 20px;
+            }
+            
+            input[type="text"],
+            button {
+                font-size: 16px; /* Prevents zoom on iOS */
+            }
+        }
+        
+        @media (max-height: 600px) {
+            footer {
+                position: static;
+                margin-top: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <img src="icon.svg" alt="Redirect Me Now Logo" class="logo-icon">
+            <h1>Redirect Me Now</h1>
+            <p class="description">Enter any website URL below to be redirected instantly</p>
+            <label for="urlInput" class="sr-only">Website URL</label>
+            <input type="text" id="urlInput" placeholder="Enter URL (e.g., https://example.com)" autofocus aria-label="Website URL to redirect to">
+            <button onclick="redirectToURL()" aria-label="Redirect to entered URL">Go to URL</button>
+            <p class="hint">Enter a complete URL including http:// or https://</p>
+            <p class="cta">Need custom software development?<br><a href="https://botgroupllc.com" target="_blank" rel="noopener noreferrer">Visit Bot Group LLC</a></p>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2026 Redirect Me Now. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function redirectToURL() {
+            const urlInput = document.getElementById('urlInput');
+            let url = urlInput.value.trim();
+            
+            if (!url) {
+                alert('Please enter a URL');
+                return;
+            }
+            
+            // Add https:// if no protocol is specified
+            if (!url.match(/^https?:\/\//i)) {
+                url = 'https://' + url;
+            }
+            
+            // Redirect to the URL
+            window.location.href = url;
+        }
+        
+        // Allow Enter key to submit
+        document.getElementById('urlInput').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                redirectToURL();
+            }
+        });
+    </script>
+</body>
+</html>
